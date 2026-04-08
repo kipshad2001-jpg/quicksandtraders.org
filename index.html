@@ -15,17 +15,16 @@
         nav a:hover { color: #ffbc00; }
 
         /* Sections */
-        section { padding: 100px 20px; min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        section { padding: 100px 20px; min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
         
         /* Hero Section */
-        #home { background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; min-height: 100vh; }
+        #home { background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; min-height: 100vh; }
         #home h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: 2px; }
         .btn { margin-top: 30px; padding: 15px 40px; background: #b21f1f; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(178, 31, 31, 0.4); }
         .btn:hover { background: #d42d2d; transform: translateY(-3px); }
 
         /* Content Blocks */
         #about { background: #f9f9f9; }
-        #services { background: #fff; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; width: 100%; margin-top: 40px; }
         .card { padding: 40px; background: #fff; border-radius: 12px; transition: 0.3s; border: 1px solid #eee; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: #1a2a6c; }
@@ -33,11 +32,14 @@
 
         /* Contact Section */
         #contact { background: #1a2a6c; color: white; }
-        .email-link { color: #ffbc00; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .email-link { color: #ffbc00; text-decoration: none; font-size: clamp(1.2rem, 4vw, 1.8rem); font-weight: bold; word-break: break-all; }
         .email-link:hover { text-decoration: underline; }
 
         /* Footer */
-        footer { background: #0d1633; color: #aaa; padding: 30px 20px; text-align: center; font-size: 0.9rem; }
+        footer { background: #0d1633; color: #7784ab; padding: 40px 20px; text-align: center; font-size: 0.9rem; }
+        .footer-links { margin-top: 15px; }
+        .footer-links a { color: #7784ab; text-decoration: none; margin: 0 10px; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .footer-links a:hover { color: #fff; border-bottom: 1px solid #ffbc00; }
         
         /* Utility */
         h2 { font-size: 2.5rem; margin-bottom: 20px; color: #1a2a6c; }
@@ -55,43 +57,46 @@
 
     <section id="home">
         <h1>QUICKSAND TRADERS</h1>
-        <p style="font-size: 1.2rem; max-width: 600px;">Providing seamless trading bridges and expert logistics solutions for the modern global economy.</p>
-        <a href="#services" class="btn">View Services</a>
+        <p style="font-size: 1.2rem; max-width: 600px;">Expert logistics and global trading solutions anchored in reliability.</p>
+        <a href="#services" class="btn">Our Services</a>
     </section>
 
     <section id="about">
         <h2>Our Mission</h2>
-        <p style="max-width: 750px; font-size: 1.1rem;">Quicksand Traders is built on the principles of reliability and efficiency. Based in Kenya with a global reach, we handle the complexities of sourcing and supply chain management so you can focus on growing your business.</p>
+        <p style="max-width: 750px; font-size: 1.1rem;">Based in Kenya, Quicksand Traders bridges the gap between local markets and global opportunities. We manage the complexity of the supply chain so you can focus on scale.</p>
     </section>
 
     <section id="services">
         <h2>What We Do</h2>
         <div class="grid">
             <div class="card">
-                <h3>Import & Export</h3>
-                <p>Facilitating the movement of goods across borders with full compliance and speed.</p>
+                <h3>Global Sourcing</h3>
+                <p>Connecting you with high-quality products from a vetted network of international suppliers.</p>
             </div>
             <div class="card">
-                <h3>Supply Chain</h3>
-                <p>End-to-end management from the manufacturer's floor to your doorstep.</p>
+                <h3>Strategic Logistics</h3>
+                <p>Efficient end-to-end management ensuring your cargo moves safely across borders.</p>
             </div>
             <div class="card">
-                <h3>Consultancy</h3>
-                <p>Strategic advice for traders looking to enter or expand within the East African market.</p>
+                <h3>Market Consultancy</h3>
+                <p>Insightful guidance for navigating trade regulations and expansion in East Africa.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>For inquiries, partnerships, or support:</p>
+        <h2>Partner With Us</h2>
+        <p>For inquiries and support, reach out to our dedicated team:</p>
         <a href="mailto:help@quicksandtraders.org" class="email-link">help@quicksandtraders.org</a>
-        <p style="margin-top: 30px; opacity: 0.8;">Nakuru, Kenya | Serving Clients Globally</p>
+        <p style="margin-top: 30px; opacity: 0.8; font-style: italic;">Nakuru, Kenya | Serving Global Markets</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 Quicksand Traders. All rights reserved.<br>
-        Built with pride in Kenya.</p>
+        <p>&copy; 2026 Quicksand Traders. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#home">Back to Top</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
     </footer>
 
 </body>
